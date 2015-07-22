@@ -1,6 +1,6 @@
 # MapML
 
-Map Markup Language is hypertext for Web maps, like HTML is hypertext for Web pages
+[Map Markup Language](http://maps4html.github.io/mapml/spec/) is hypertext for Web maps, like HTML is hypertext for Web pages
 
 ## Background
 
@@ -12,4 +12,3 @@ MapML aims to be a simple format which strictly relies on existing Web standards
 
 MapML is being developed by the [W3C Maps For HTML Community Group](http://www.w3.org/community/maps4html/).  Membership in that group is encouraged, however you do not have to join to use the information found here.  However, if you wish to contribute, please join the Maps For HTML Community Group, and help us make the Web a map-friendly platform for everyone, everywhere!
 
-You can also [view](http://maps4html.github.io/mapml/spec/) the draft spec on the Web, thanks to GitHub.
