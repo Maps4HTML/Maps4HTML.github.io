@@ -106,6 +106,9 @@ M.MapMLLayer = L.Class.extend({
         ymax = Math.max(v1,v2);
         return new L.LatLngBounds(new L.LatLng(ymin, xmin), new L.LatLng(ymax,xmax));
     },
+    getAttribution: function () {
+        return this.options.attribution;
+    },
     _initExtent: function() {
         if (!this._href) {return;}
         var layer = this;
@@ -136,10 +139,16 @@ M.MapMLLayer = L.Class.extend({
             if (this.responseXML) {
                 var xml = this.responseXML;
                 var serverExtent = xml.getElementsByTagName('extent')[0];
-                L.setOptions(layer,{projection:xml.querySelectorAll('input[type=projection]')[0].getAttribute('value')});
+                var licenseLink =  xml.querySelectorAll('link[rel=license]')[0],
+                    licenseTitle = licenseLink.getAttribute('title'),
+                    licenseUrl = licenseLink.getAttribute('href'),
+                    attText = '<a href="' + licenseUrl + '" title="'+licenseTitle+'">'+licenseTitle+'</a>';
+                L.setOptions(layer,{projection:xml.querySelectorAll('input[type=projection]')[0].getAttribute('value'), attribution:attText });
                 layer["_extent"] = serverExtent;
-                if (layer._map) 
+                if (layer._map) {
+                    layer._map.attributionControl.addAttribution(attText);
                     layer._map.fire('moveend', layer);
+                }
             }
         };
     },
