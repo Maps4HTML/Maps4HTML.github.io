@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>MapML Leaflet client</title>
     <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
-    <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+    <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet-src.js"></script>
     <script src="./scripts/mapml.js"></script>
     <script src="./scripts/URI.js"></script>
     <script src='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v0.0.4/Leaflet.fullscreen.min.js'></script>
@@ -14,9 +14,9 @@
     <h1>MapML Leaflet client</h1>
     <div id="mapml-map" style="height: 480px; width: 640px"></div>
     <script>
-      var cbmt =        M.mapMLLayer('http://geogratis.gc.ca/mapml/cbmt/', {zIndex:2,projection:'OSMTILE', attribution: '<a href="http://geogratis.gc.ca/api/en/nrcan-rncan/ess-sst/9c0442d1-e04f-11e3-9a19-90b11c67bbbf.html">CanVec+</a> &copy; <a href="https://www.nrcan.gc.ca/earth-sciences/geography/topographic-information/free-data-geogratis/licence/17285">Natural Resources Canada</a>'}),
-          canvec =      M.mapMLLayer('http://geogratis.gc.ca/mapml/canvec/50k/features/',{zIndex:3,projection:'WGS84'}),
-          osm =         M.mapMLLayer('http://geogratis.gc.ca/mapml/osm/',{zIndex:1,projection:'OSMTILE', attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>'})
+      var cbmt =        M.mapMLLayer('http://localhost/mapml/cbmt/', {zIndex:2,projection:'OSMTILE'}),
+          osm =         M.mapMLLayer('http://localhost/mapml/osm/',{zIndex:1,projection:'OSMTILE'})
+          canvec =         M.mapMLLayer('http://localhost/mapml/canvec/50k/features/',{zIndex:3,projection:'WGS84'})
           mapMLMap =    L.map('mapml-map',{
                   center: [45.398043,-75.70683],
                   zoom: 15,
@@ -24,6 +24,7 @@
                   fullscreenControl: true
                 }),
           layerControl = M.mapMlLayerControl({"Open Street Map":osm, 'Canada Base Map':cbmt, 'CanVec+ 031G':canvec}).addTo(mapMLMap);
+          mapMLMap.attributionControl.setPrefix('<a href="https://www.w3.org/community/maps4html/" title="W3C Maps4HTML Community Group">MapML</a>')
     </script>
   </body>
 </html>
