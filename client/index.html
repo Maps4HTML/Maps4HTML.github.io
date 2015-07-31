@@ -14,9 +14,9 @@
     <h1>MapML Leaflet client</h1>
     <div id="mapml-map" style="height: 480px; width: 640px"></div>
     <script>
-      var cbmt =        M.mapMLLayer('http://localhost/mapml/cbmt/', {zIndex:2,projection:'OSMTILE'}),
-          osm =         M.mapMLLayer('http://localhost/mapml/osm/',{zIndex:1,projection:'OSMTILE'})
-          canvec =         M.mapMLLayer('http://localhost/mapml/canvec/50k/features/',{zIndex:3,projection:'WGS84'})
+      var cbmt =        M.mapMLLayer('http://geogratis.gc.ca/mapml/cbmt/', {zIndex:2,projection:'OSMTILE'}),
+          osm =         M.mapMLLayer('http://geogratis.gc.ca/mapml/osm/',{zIndex:1,projection:'OSMTILE'})
+          canvec =         M.mapMLLayer('http://geogratis.gc.ca/mapml/canvec/50k/features/',{zIndex:3,projection:'WGS84'})
           mapMLMap =    L.map('mapml-map',{
                   center: [45.398043,-75.70683],
                   zoom: 15,
