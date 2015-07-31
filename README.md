@@ -1,5 +1,6 @@
 # MapML-Leaflet-Client
 MapML JavaScript client for Leaflet.js
 
-Doesn't [work](http://maps4html.github.io/MapML-Leaflet-Client/) currently, as the CORS header is absent from the referenced server at present.  
-If you proxy those services, though, it should [work](http://geogratis.gc.ca/mapml/client/map-carte.html) if you get the MapML through your proxy.  You could of course serve your own mapml content with the [MapMLTileServlet](https://github.com/Maps4HTML/MapMLServer).
+The MapML client library is based on Leaflet 0.7.3, and supports adds the concept of a MapML layer, is referred to by a simple URL.
+
+[Demo](http://maps4html.github.io/MapML-Leaflet-Client/)
