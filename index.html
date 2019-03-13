@@ -1,9 +1,220 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>index</title>
-    <meta http-equiv="refresh" content="0; URL=https://maps4html.github.io/HTML-Map-Element-UseCases-Requirements/" />
+    <meta charset="UTF-8"/>
+    <title>Maps4HTML Community Group Pages</title>
   </head>
   <body>
+    <header>
+      <h1>Maps for HTML Community Group</h1>
+      <p>
+        Index to group projects and resources
+      </p>
+    </header>
+    <section>
+      <h2>About the Community Group</h2>
+      <p>
+        The Maps for HTML community group is working to standardize
+        methods of defining interactive geographic maps for websites.
+        The community group is hosted by the W3C (World Wide Web Consortium),
+        and is open to anyone who is interested in maps and web standards.
+      </p>
+      <p>
+        For more information, consult:
+      </p>
+      <ul>
+        <li><a href="https://www.w3.org/community/maps4html/">Maps for HTML Community Group homepage on w3.org</a>
+          <p>
+            Includes a blog (infrequently updated),
+            along with other information such as
+            links to the group's draft reports,
+            links to the group's mailing list, social media, and forums,
+            and lists of current participants and chairs.
+          </p>
+          <p>
+            Most importantly of all,
+            <em>this is where you join the group!</em>
+            Look for the “Get involved” heading
+            and the “Join this group” link.
+            You'll need to create a W3C website account,
+            and accept the <a href="https://www.w3.org/community/about/agreements/cla/">W3C Community Contributor License Agreement</a>.
+            If you have an employer with rights to work you create,
+            they may need to join on your behalf.
+          </p>
+        </li>
+        <li><a href="https://www.w3.org/community/about/">“About” page for all W3C-hosted community groups</a>
+          <p>
+            With details on the process
+            and legal/intellectual property requirements
+            for community group participation.
+          </p>
+        </li>
+        <li><a href="https://lists.w3.org/Archives/Public/public-maps4html/">The group mailing list archive</a>
+          <p>
+            Contains a history of notices and discussion.
+            However, most discussion happens within the GitHub project repositories.
+          </p>
+        </li>
+        <li><a href="https://github.com/Maps4HTML">Maps4HTML organization on GitHub</a>
+          <p>
+            Most work by the group can be found here
+            (including this web page).
+          </p>
+        </li>
+      </ul>
+    </section>
+    <section>
+      <h2>Specifications and Reports</h2>
+      <p>
+        The group is currently working on three reports
+        (which are all drafts and subject to change):
+      </p>
+      <ul>
+        <li><a href="http://maps4html.github.io/HTML-Map-Element-UseCases-Requirements/">HTML map element: Use Cases and Requirements</a>
+          (<a href="https://github.com/Maps4HTML/HTML-Map-Element-UseCases-Requirements">GitHub repository</a>)
+          <p>
+            An overview of why HTML needs a built-in map viewer element,
+            which can combine multiple layers into an interactive view.
+          </p>
+        </li>
+        <li><a href="https://maps4html.github.io/HTML-Map-Element/spec/">HTML map element specification</a>
+          (<a href="https://github.com/Maps4HTML/HTML-Map-Element">GitHub repository</a>)
+          <p>
+            A proposal for how the HTML map viewer and layer elements could be defined.
+          </p>
+        </li>
+        <li><a href="https://maps4html.github.io/MapML/spec/">MapML specification</a>
+          (<a href="https://github.com/Maps4HTML/MapML">GitHub repository</a>)
+          <p>
+            A proposal for a new document format for describing maps (MapML),
+            which could contain a mix of tiled images,
+            vector features (e.g., points, lines, polygons),
+            and hyperlinks to related resources.
+            MapML documents could be used as layers in an HTML map viewer.
+          </p>
+        </li>
+      </ul>
+    </section>
+    <section>
+      <h2>Software projects</h2>
+      <p>
+        The following projects
+        (hosted by the community group's GitHub account)
+        make it possible to experiment with the proposed specifications:
+      </p>
+      <ul>
+        <li><a href="https://github.com/Maps4HTML/Web-Map-Custom-Element">Web map custom element</a>
+          <p>
+            A recreation of the HTML map element specification,
+            with MapML support,
+            an an HTML custom element,
+            using Leaflet to display the maps.
+          </p>
+          <p>
+            Note: The code currently uses the “version 0” custom elements API,
+            and therefore requires the Polymer polyfills to work.
+          </p>
+        </li>
+        <li><a href="https://github.com/Maps4HTML/MapML-Leaflet-Plugin">MapML Leaflet Plugin</a>
+          <p>
+            The code that allows Leaflet to support MapML layers.
+          </p>
+        </li>
+        <li><a href="https://github.com/Maps4HTML/MapMLServer">MapML Server</a>
+          <p>
+            A Java servlet for Apache Tomcat for fetching MapML requests.
+          </p>
+        </li>
+      </ul>
+    </section>
+    <section>
+      <h2>Working Demos</h2>
+      <p>
+        Websites that use the custom element and MapML server,
+        hosted by Natural Resources Canada.
+      </p>
+      <ul>
+        <li><a href="https://geogratis.gc.ca/mapml/">Demo MapML viewers</a>
+          <p>
+            Interactive map viewers,
+            with maps on various subjects and in various projections,
+            including arctic views (not supported by most web map tiling systems).
+          </p>
+        </li>
+        <li><a href="https://geogratis.gc.ca/api/beta/mapml/static/cubewerx_cgdi_proxy_geomet_directory.html">MapML versions of GeoMet WMS</a>
+          <p>
+            Direct access to MapML files,
+            generated from live CubeWerx Environment and Climate Change data.
+            These files can be dragged and dropped onto the <a href="https://geogratis.gc.ca/mapml/">MapML viewers</a>.
+          </p>
+        </li>
+        <li><a href="https://geogratis.gc.ca/api/beta/mapml/static/cubewerx_cgdi_proxy_wmts.html">Collection of MapML viewers of CubeWerx maps</a>
+        </li>
+      </ul>
+    </section>
+    <section>
+      <h2>Other links</h2>
+      <p>
+        The following related projects
+        aren't controlled or published by the community group, but
+        may be of interest:
+      </p>
+      <ul>
+        <li><a href="http://www.opengeospatial.org/standards/">OGC® Standards and Supporting Documents</a>
+          <p>
+            The Open Geospatial Consortium (OGC) publishes standards for map-related data,
+            many of which are used or adapted for MapML.
+          </p>
+        </li>
+        <li><a href="http://docs.opengeospatial.org/per/17-019.html">MapML Engineering Report (2017)</a> from the <abbr title="Open Geospatial Consortium">OGC</abbr> Testbed 13
+          <p>
+            Reviews the MapML spec (as it was at the time)
+            and experimental implementations for serving and using MapML documents.
+            Some of the recommendations have since been integrated in the specification,
+            or otherwise made redundant.
+            A follow-up report will be published as part of OGC Testbed 14.
+          </p>
+        </li>
+        <li><a href="https://www.w3.org/TR/2017/NOTE-sdw-bp-20170928/">Spatial Data on the Web Best Practices</a>
+          and <a href="https://w3c.github.io/sdw/UseCases/SDWUseCasesAndRequirements.html">Use Cases and Requirements</a>
+          <p>
+            These reports were prepared by
+            the <a href="https://www.w3.org/2017/sdwig/">Spatial Data on the Web Working Group (now Interest Group)</a>,
+            a joint project of the OGC and W3C.
+            Some of the recommendations are relevant to map viewers and map data servers.
+          </p>
+        </li>
+        <li><a href="https://leafletjs.com/">Leaflet</a>
+          <p>
+            A JavaScript API for building custom map viewers on the web,
+            used in the web-map custom element.
+          </p>
+        </li>
+        <li><a href="http://geojson.org/">GeoJSON specification</a>
+          <p>
+            IETF standard <a href="https://tools.ietf.org/html/rfc7946">RFC 7946</a>
+            is a standardized representation of vector feature data in JSON structure.
+          </p>
+        </li>
+        <li><a href="https://www.svgmap.org/">SVGMap</a>
+          <p>
+            An alternative to MapML for standardizing interactive web maps,
+            building on the ability of SVG to mix image tiles with vector features and hyperlinks.
+          </p>
+          <p>
+            See the related proposals for standardizing key new SVG features:
+            <a href="https://www.w3.org/Submission/2011/SUBM-SVGTL-20110607/">SVG Tiling and Layering Module (proposal)</a>
+            and <a href="https://www.w3.org/Graphics/SVG/WG/wiki/Proposals/globalView">SVG globalView proposal</a>
+          </p>
+        </li>
+      </ul>
+    </section>
+    <footer>
+      The source code for this web page
+      is <a href="https://github.com/Maps4HTML/Maps4HTML.github.io">hosted on GitHub</a>.
+      Please file an issue or make a pull request
+      if you find a typo or broken link,
+      or if you think we should add other information.
+    </footer>
   </body>
 </html>
