@@ -3,6 +3,100 @@
   <head>
     <meta charset="UTF-8"/>
     <title>Maps4HTML Community Group Pages</title>
+    <style>
+body {
+  margin: 0;
+
+  background: #eaeaff;
+  color: #003810;
+
+  font-family: Verdana, sans-serif;
+  line-height: 1.4;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(35em, 1fr));
+}
+
+header, footer, section {
+  margin: 0;
+  padding: 1em;
+  max-width: 45em;
+}
+
+header, footer {
+  grid-column: 1 / -1;
+}
+
+section:nth-of-type(odd) {
+  margin-left: auto;
+  justify-self: end;
+}
+
+footer {
+  border-top: dotted thin;
+  margin: auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0 -1em;
+  padding: 0.2em 1em;
+  line-height: 1;
+  background: hsla(0,0%,100%,0.5)
+}
+
+ul {
+  padding-left: 1.5em;
+}
+
+li {
+  margin-bottom: 1em;
+}
+
+li p {
+  margin: 0.3em 0;
+}
+
+a {
+  font-weight: 600;
+  background: hsla(0,0%,100%,0.5);
+  padding: 0.1em 0.3em 0.3em;
+  margin: 0 -0.3em;
+  border-radius: 0.5em;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+a:link {
+  color: #228;
+}
+
+a:visited {
+    color: #626;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    color: #d8e0ff;
+    background: #002020;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    background: hsla(0, 0%, 0%, 0.3);
+  }
+
+  a {
+    background: hsla(0,0%,0%,0.15);
+  }
+
+  a:link {
+      color: #68f;
+  }
+
+  a:visited {
+      color: #a5d;
+  }
+}
+    </style>
   </head>
   <body>
     <header>
