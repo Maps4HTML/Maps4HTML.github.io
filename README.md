@@ -1,6 +1,18 @@
-# MapML
+# Maps4HTML.github.io
 
-[Map Markup Language](http://maps4html.github.io/MapML/spec/) is hypertext for Web maps, like HTML is hypertext for Web pages
+This repository defines the home page for Maps4HTML.github.io,
+the GitHub Pages website for the [W3C Maps For HTML Community Group](http://www.w3.org/community/maps4html/).
+
+The [home page](https://Maps4HTML.github.io/) is an index of useful resources
+about the group and its work.
+Source code is in the [index.html file](https://github.com/Maps4HTML/Maps4HTML.github.io/blob/master/index.html).
+Please file an issue or make a pull request
+to suggest updates or new links.
+
+GitHub Pages is also used to host the editor's draft versions of our reports,
+including the [MapML spec](http://maps4html.github.io/MapML/spec/)
+and the [HTML map element proposal](https://maps4html.github.io/HTML-Map-Element/spec/).
+These files are hosted in their individual repositories.
 
 ## Background
 
