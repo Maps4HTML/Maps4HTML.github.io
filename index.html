@@ -171,6 +171,16 @@ a:visited {
             which can combine multiple layers into an interactive view.
           </p>
         </li>
+        <li>
+            An explainer of the 
+            <a href="https://github.com/Maps4HTML/MapML-Proposal#the-mapml-proposal---explainermd">MapML proposal</a>.  
+            The explainer is based on a <a href="https://w3ctag.github.io/explainers">template</a> 
+            recommended by the W3C TAG, and may be the best place to start in 
+            trying to understand the substance of the MapML proposal.  The 
+            "MapML Proposal" relates to the following two proposed specifications,
+            which are slightly out of date and need to be revised.  GitHub
+            issues in the explainer repository can be used to identify problems.
+        </li>
         <li><a href="https://maps4html.github.io/HTML-Map-Element/spec/">HTML map element specification</a>
           (<a href="https://github.com/Maps4HTML/HTML-Map-Element">GitHub repository</a>)
           <p>
@@ -187,6 +197,8 @@ a:visited {
             MapML documents could be used as layers in an HTML map viewer.
           </p>
         </li>
+        <li>A <a href="https://www.w3.org/community/maps4html/2019/12/09/the-design-of-mapml/">blog post</a>, detailing how the MapML proposal relates to the 
+            <a href="https://www.w3.org/TR/html-design-principles/">HTML Design Principles</a>.</li>
       </ul>
     </section>
     <section>
@@ -197,26 +209,21 @@ a:visited {
         make it possible to experiment with the proposed specifications:
       </p>
       <ul>
-        <li><a href="https://github.com/Maps4HTML/Web-Map-Custom-Element">Web map custom element</a>
+        <li><a href="https://github.com/Maps4HTML/Web-Map-Custom-Element">Web-map custom element</a>
           <p>
-            A recreation of the HTML map element specification,
-            with MapML support,
-            an an HTML custom element,
-            using Leaflet to display the maps.
-          </p>
-          <p>
-            Note: The code currently uses the “version 0” custom elements API,
-            and therefore requires the Polymer polyfills to work.
+            A polyfill of the proposed HTML map / layer element specification,
+            with MapML support, as a set of HTML custom elements,  using Leaflet
+            as the map rendering engine.
           </p>
         </li>
-        <li><a href="https://github.com/Maps4HTML/MapML-Leaflet-Plugin">MapML Leaflet Plugin</a>
+        <li><a href="https://github.com/Maps4HTML/geoserver">GeoServer MapML MapML Community Module</a>
           <p>
-            The code that allows Leaflet to support MapML layers.
-          </p>
-        </li>
-        <li><a href="https://github.com/Maps4HTML/MapMLServer">MapML Server</a>
-          <p>
-            A Java servlet for Apache Tomcat for fetching MapML requests.
+            A GeoServer module that enables MapML output, supporting images, 
+            features and tiles. There is basic 
+            <a href="https://docs.geoserver.org/latest/en/user/community/mapml/index.html">documentation</a> 
+            available, as well as 
+            <a href="https://youtu.be/14XvqNf4jTE?list=PLA07raojXKMuJdyBMs32G9ChY4JQxnlbn">instructions</a> 
+            on how to install the module.
           </p>
         </li>
       </ul>
@@ -235,7 +242,15 @@ a:visited {
             including arctic views (not supported by most web map tiling systems).
           </p>
         </li>
-        <li><a href="https://geogratis.gc.ca/mapml/static/cubewerx_cgdi_proxy_geomet_directory.html">MapML versions of GeoMet WMS</a>
+        <li><a href="https://geogratis.gc.ca/mapml/static/us_pop_density.html">Vector example</a>
+          <p>
+            This is an HTML document containing map markup inline, representing
+            vector data according to the MapML &lt;feature&gt; proposal. </a>.
+          </p>
+        </li>
+        https://geogratis.gc.ca/mapml/static/us_pop_density.html
+        
+<!--        <li><a href="https://geogratis.gc.ca/mapml/static/cubewerx_cgdi_proxy_geomet_directory.html">MapML versions of GeoMet WMS</a>
           <p>
             Direct access to MapML files,
             generated from live CubeWerx Environment and Climate Change data.
@@ -243,7 +258,7 @@ a:visited {
           </p>
         </li>
         <li><a href="https://geogratis.gc.ca/mapml/static/cubewerx_cgdi_proxy_wmts.html">Collection of MapML viewers of CubeWerx maps</a>
-        </li>
+        </li>-->
       </ul>
     </section>
     <section>
