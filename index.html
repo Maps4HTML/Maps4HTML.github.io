@@ -156,6 +156,9 @@ a:visited {
             (including this web page).
           </p>
         </li>
+        <li><a href="https://www.youtube.com/channel/UCKIv6IGwzxPF2HNhvq-VhKA">Maps for HTML is on YouTube</a>
+          <p>The Maps for HTML Community Group has a <a href="https://www.youtube.com/channel/UCKIv6IGwzxPF2HNhvq-VhKA" >channel</a> on YouTube.</p>
+        </li>
       </ul>
     </section>
     <section>
@@ -197,6 +200,19 @@ a:visited {
             and hyperlinks to related resources.
             MapML documents could be used as layers in an HTML map viewer.
           </p>
+        </li>
+        <li>MapML Engineering Reports from the <abbr title="Open Geospatial Consortium">OGC</abbr> Innovation Program
+            <ul>
+                <li>
+                  <a  href="https://docs.opengeospatial.org/per/17-019.html">Testbed 13</a> - early community ideas
+                </li>
+                <li>
+                  <a  href="https://docs.opengeospatial.org/per/18-023r1.html">Testbed 14</a> - improved vocabulary
+                </li>
+                <li>
+                  <a  href="https://docs.opengeospatial.org/per/19-046r1.html">Testbed 15</a> - improved vector model
+                </li>
+            </ul>
         </li>
         <li>A <a href="https://www.w3.org/community/maps4html/2019/12/09/the-design-of-mapml/">blog post</a>, detailing how the MapML proposal relates to the 
             <a href="https://www.w3.org/TR/html-design-principles/">HTML Design Principles</a>.</li>
@@ -258,22 +274,41 @@ a:visited {
         <li><a href="https://geogratis.gc.ca/mapml/static/us_pop_density.html">Vector example</a>
           <p>
             This is an HTML document containing map markup inline, representing
-            vector data according to the MapML &lt;feature&gt; proposal. </a>.
+            vector data according to the MapML &lt;feature&gt; proposal. 
           </p>
         </li>
-
-        
-<!--        <li><a href="https://geogratis.gc.ca/mapml/static/cubewerx_cgdi_proxy_geomet_directory.html">MapML versions of GeoMet WMS</a>
+      </ul>
+    </section>
+    <section>
+      <h2>Related standards and document formats</h2>
+      <p>
+        The following standards may be of relevance to maps in HTML:
+      </p>
+      <ul>
+        <li><a href="https://www.opengeospatial.org/standards/">OGC Standards and Supporting Documents</a>
           <p>
-            Direct access to MapML files,
-            generated from live CubeWerx Environment and Climate Change data.
-            These files can be dragged and dropped onto the <a href="https://geogratis.gc.ca/mapml/">MapML viewers</a>.
+            The Open Geospatial Consortium (OGC) publishes standards for map-related data,
+            some of which are used or adapted by MapML:
+          </p>
+          <ul>
+              <li><a href="https://www.opengeospatial.org/standards/wms">Web Map Service</a></li>
+              <li><a href="https://www.opengeospatial.org/standards/wmts">Web Map Tile Service</a></li>
+              <li><a href="https://www.opengeospatial.org/standards/tms">Tile Matrix Set</a></li>
+              <li><a href="https://www.opengeospatial.org/standards/sfa">Simple Features</a></li>
+          </ul>
+        </li>
+        <li><a href="http://geojson.org/">GeoJSON specification</a>
+          <p>
+            IETF standard <a href="https://tools.ietf.org/html/rfc7946">RFC 7946</a>
+            is a standardized representation of vector feature data in JSON structure.
           </p>
         </li>
-        <li><a href="https://geogratis.gc.ca/mapml/static/cubewerx_cgdi_proxy_wmts.html">Collection of MapML viewers of CubeWerx maps</a>
-        </li>-->
-        <li><a href="https://www.youtube.com/channel/UCKIv6IGwzxPF2HNhvq-VhKA" target="_blank">Maps for HTML is on YouTube</a>
-          <p>The Maps for HTML Community Group has a <a href="https://www.youtube.com/channel/UCKIv6IGwzxPF2HNhvq-VhKA" target="_blank">channel</a> on YouTube.</p>
+        <li><a href="https://tools.ietf.org/html/rfc5870">Geo URI specification</a>
+          <p>
+            IETF RFC <a href="https://tools.ietf.org/html/rfc5870">RFC 5870</a>
+            is a URI scheme allowing WGS 84 locations to be conveyed in URLs
+            conforming to a specified URI scheme.
+          </p>
         </li>
       </ul>
     </section>
@@ -285,23 +320,6 @@ a:visited {
         may be of interest:
       </p>
       <ul>
-        <li><a href="https://www.opengeospatial.org/standards/">OGC® Standards and Supporting Documents</a>
-          <p>
-            The Open Geospatial Consortium (OGC) publishes standards for map-related data,
-            some of which are used or adapted by MapML.
-          </p>
-        </li>
-        <li>MapML Engineering Reports from the <abbr title="Open Geospatial Consortium">OGC</abbr> Innovation Program
-          <p>
-            <a target="_blank" href="https://docs.opengeospatial.org/per/17-019.html">Testbed 13</a> - early community ideas
-          </p>
-          <p>
-            <a target="_blank" href="https://docs.opengeospatial.org/per/18-023r1.html">Testbed 14</a> - improved vocabulary
-          </p>
-          <p>
-            <a target="_blank" href="https://docs.opengeospatial.org/per/19-046r1.html">Testbed 15</a> - improved vector model
-          </p>
-        </li>
         <li><a href="https://www.w3.org/TR/2017/NOTE-sdw-bp-20170928/">Spatial Data on the Web Best Practices</a>
           and <a href="https://w3c.github.io/sdw/UseCases/SDWUseCasesAndRequirements.html">Use Cases and Requirements</a>
           <p>
@@ -330,27 +348,6 @@ a:visited {
             See the related proposals for standardizing key new SVG features:
             <a href="https://www.w3.org/Submission/2011/SUBM-SVGTL-20110607/">SVG Tiling and Layering Module (proposal)</a>
             and <a href="https://www.w3.org/Graphics/SVG/WG/wiki/Proposals/globalView">SVG globalView proposal</a>
-          </p>
-        </li>
-      </ul>
-    </section>
-    <section>
-      <h2>RFCs and other relevant documents</h2>
-      <p>
-        The following standards may be of relevance to maps in HTML:
-      </p>
-      <ul>
-        <li><a href="http://geojson.org/">GeoJSON specification</a>
-          <p>
-            IETF standard <a href="https://tools.ietf.org/html/rfc7946">RFC 7946</a>
-            is a standardized representation of vector feature data in JSON structure.
-          </p>
-        </li>
-        <li><a href="https://tools.ietf.org/html/rfc5870">Geo URI specification</a>
-          <p>
-            IETF RFC <a href="https://tools.ietf.org/html/rfc5870">RFC 5870</a>
-            is a URI scheme allowing WGS 84 locations to be conveyed in URLs
-            conforming to a specified URI scheme.
           </p>
         </li>
       </ul>
