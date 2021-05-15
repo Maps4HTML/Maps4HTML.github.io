@@ -1,6 +1,8 @@
 {
   "name": "Maps for HTML Community Group",
   "short_name": "Maps4HTML",
+  "start_url": "./",
+  "display": "minimal-ui",
   "icons": [
     {
       "src": "assets/maps4html_32x32.png",
