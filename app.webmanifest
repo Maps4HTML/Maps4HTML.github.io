@@ -1,0 +1,33 @@
+{
+  "name": "Maps for HTML Community Group",
+  "short_name": "Maps4HTML",
+  "start_url": "./",
+  "display": "minimal-ui",
+  "icons": [
+    {
+      "src": "assets/maps4html_32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/maps4html_48x48.png",
+      "sizes": "48x48",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/maps4html_96x96.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/maps4html_192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/maps4html_512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
