@@ -36,21 +36,15 @@ body {
 header, footer, section {
   margin: 0;
   padding: 1em;
-  max-width: 45em;
 }
 
 header, footer {
   grid-column: 1 / -1;
 }
 
-section:nth-of-type(odd) {
-  margin-left: auto;
-  justify-self: end;
-}
-
 footer {
   border-top: dotted thin;
-  margin: auto;
+  margin: 0 auto;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -90,6 +84,44 @@ a:visited {
     color: #626;
 }
 
+.logo {
+  display: block;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+          user-select: none;
+}
+
+@media (max-width: 1199px) {
+  body {
+    padding: 0 2rem;
+  }
+  
+  .logo {
+    margin: 4rem auto;
+    height: auto;
+    width: 100%;
+    max-width: 40vw;
+  }
+  
+  li {
+    margin: 1.5em 0;
+  }
+}
+
+@media (min-width: 1200px) {
+  header, footer, section {
+    padding: 1em;
+    max-width: 45em;
+  }
+  
+  .logo {
+    padding: 1rem;
+    float: left;
+    -webkit-shape-outside: circle(50%);
+            shape-outside: circle(50%);
+  }
+}
+
 @media (prefers-color-scheme: dark) {
   body {
     color: #d8e0ff;
@@ -123,9 +155,12 @@ a:visited {
     </header>
     <section>
       <h2>About the Community Group</h2>
+      <img class="logo" src="./assets/maps4html_512x512.png" width="192" height="192" alt="Maps for HTML">
       <p>
-        The Maps for HTML community group is working to standardize
-        methods of defining interactive geographic maps for websites.
+        The Maps for HTML Community Group is working to standardize
+        methods of defining interactive geographic maps for the web.
+      </p>
+      <p>
         The community group is hosted by the W3C (World Wide Web Consortium),
         and is open to anyone who is interested in maps and web standards.
       </p>
