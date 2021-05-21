@@ -11,7 +11,7 @@ to suggest updates or new links.
 
 GitHub Pages is also used to host the editor's draft versions of our reports,
 including the [MapML spec](http://maps4html.github.io/MapML/spec/)
-and the [HTML map element proposal](https://maps4html.github.io/HTML-Map-Element/spec/).
+and the [Use Cases and Requirements for Standardizing Web Maps](https://maps4html.org/HTML-Map-Element-UseCases-Requirements/).
 These files are hosted in their individual repositories.
 
 ## Background
