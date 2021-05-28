@@ -28,6 +28,7 @@ html {
 
 body {
   margin: 0;
+  padding: 1rem;
 
   background: #dbe8d9;
   color: #003810;
@@ -43,12 +44,12 @@ header, footer, section {
   padding: 1em;
 }
 
-header, footer {
+header, nav, footer {
   grid-column: 1 / -1;
 }
 
 footer {
-  border-top: dotted thin;
+  border-top: 2px solid rgb(0 56 16 / 10%);
   margin: 0 auto;
 }
 
@@ -58,7 +59,11 @@ h1, h2, h3, h4, h5, h6 {
   background: hsla(0,0%,100%,0.5)
 }
 
-ul {
+section[id] h2 {
+  padding-inline-start: 2em;
+}
+
+ul, ol {
   padding-left: 1.5em;
 }
 
@@ -78,6 +83,7 @@ a {
   border-radius: 0.5em;
   -webkit-box-decoration-break: clone;
   box-decoration-break: clone;
+  transition: 150ms;
 }
 
 a:link {
@@ -93,6 +99,7 @@ a:visited {
   font-size: 80%;
   vertical-align: text-bottom;
   text-decoration: none;
+  margin-inline-start: -2em;
 }
 
 .logo {
@@ -102,13 +109,53 @@ a:visited {
           user-select: none;
 }
 
+nav {
+  background: inherit;
+  padding: .5rem 1rem;
+  margin: 0 -1rem;
+  border-bottom: 2px solid rgb(0 56 16 / 10%);
+}
+
+nav details {
+  display: inline-block;
+}
+
+nav details ul {
+  font-size: .95rem;
+}
+
+summary {
+  cursor: pointer;
+}
+
+.event {
+  display: block;
+  font-style: italic;
+  margin-top: .25rem;
+}
+.event a {
+  color: inherit!important;
+  font-weight: normal;
+  text-underline-offset: .2rem;
+}
+
+.event a abbr {
+  text-underline-offset: .1rem;
+}
+
 @media (max-width: 1199px) {
-  body {
-    padding: 0 2rem;
+  nav {
+    top: 0;
+    position: sticky;
+  }
+  
+  section[id] {
+    padding-top: 3rem;
+    margin-top: -2rem;
   }
   
   .logo {
-    margin: 4rem auto;
+    margin: 2rem auto;
     height: auto;
     max-width: 100%;
   }
@@ -141,6 +188,14 @@ a:visited {
     color: #d8e0ff;
     background: #002020;
   }
+  
+  nav {
+    border-bottom: 2px solid rgb(216 224 255 / 20%);
+  }
+  
+  footer {
+    border-top: 2px solid rgb(216 224 255 / 20%);
+  }
 
   h1, h2, h3, h4, h5, h6 {
     background: hsla(0, 0%, 0%, 0.3);
@@ -163,12 +218,23 @@ a:visited {
   <body>
     <header>
       <h1>Maps for HTML Community Group</h1>
-      <p>
-        Index to group projects and resources
-      </p>
     </header>
-    <section>
-      <h2 id="about"><a href="#about" class="anchor">🔗</a> About the Community Group</h2>
+    <nav>
+      <details>
+        <summary>Index to group projects and resources</summary>
+        <ul>
+          <li><a href="#about">About the Community Group</a></li>
+          <li><a href="#specifications-and-reports">Specifications and Reports</a></li>
+          <li><a href="#software-projects">Software Projects</a></li>
+          <li><a href="#demos">Working Demos</a></li>
+          <li><a href="#related-standards">Related standards and document formats</a></li>
+          <li><a href="#events">Events</a></li>
+          <li><a href="#other-links">Other links</a></li>
+        </ul>
+      </details>
+    </nav>
+    <section id="about">
+      <h2><a href="#about" class="anchor">🔗</a> About the Community Group</h2>
       <img class="logo" src="./assets/maps4html_512x512.png" width="192" height="192" alt="Maps for HTML">
       <p>
         The Maps for HTML Community Group is working to standardize
@@ -225,8 +291,8 @@ a:visited {
         </li>
       </ul>
     </section>
-    <section>
-      <h2 id="specifications-and-reports"><a href="#specifications-and-reports" class="anchor">🔗</a> Specifications and Reports</h2>
+    <section id="specifications-and-reports">
+      <h2><a href="#specifications-and-reports" class="anchor">🔗</a> Specifications and Reports</h2>
       <p>
         The group is currently working on four reports
         (which are all drafts and subject to change):
@@ -285,8 +351,8 @@ a:visited {
             <a href="https://www.w3.org/TR/html-design-principles/">HTML Design Principles</a>.</li>
       </ul>
     </section>
-    <section>
-      <h2 id="software-projects"><a href="#software-projects" class="anchor">🔗</a> Software projects</h2>
+    <section id="software-projects">
+      <h2><a href="#software-projects" class="anchor">🔗</a> Software projects</h2>
       <p>
         The following projects
         (hosted by the community group's GitHub account)
@@ -322,8 +388,8 @@ a:visited {
         </li>
       </ul>
     </section>
-    <section>
-      <h2 id="demos"><a href="#demos" class="anchor">🔗</a> Working Demos</h2>
+    <section id="demos">
+      <h2><a href="#demos" class="anchor">🔗</a> Working Demos</h2>
       <p>
         Websites that use the custom element and MapML server,
         hosted by Natural Resources Canada.
@@ -344,8 +410,8 @@ a:visited {
         </li>
       </ul>
     </section>
-    <section>
-      <h2 id="related-standards"><a href="#related-standards" class="anchor">🔗</a> Related standards and document formats</h2>
+    <section id="related-standards">
+      <h2><a href="#related-standards" class="anchor">🔗</a> Related standards and document formats</h2>
       <p>
         The following standards may be of relevance to maps in HTML:
       </p>
@@ -383,8 +449,78 @@ a:visited {
         </li>
       </ul>
     </section>
-    <section>
-      <h2 id="other-links"><a href="#other-links" class="anchor">🔗</a> Other links</h2>
+    <section id="events">
+      <h2><a href="#events" class="anchor">🔗</a> Events</h2>
+      <p>Conferences, meeting minutes, presentations, workshops, and other notable events:</p>
+      <ol reversed>
+        <li>
+          <a href="https://www.w3.org/2020/10/TPAC/breakout-schedule.html#maps4html">
+            Summary presentation of the W3C/OGC Joint Workshop Series on Maps for the Web and follow-up discussion
+          </a>
+          <small class="event">
+            <a href="https://www.w3.org/2020/10/TPAC/">
+              W3C <abbr title="All Working Group meetings, Technical Plenary, and Advisory Committee Meeting week">TPAC</abbr>, virtual meeting.
+              <time datetime="2020-10-27">27 October, 2020.</time>
+            </a>
+          </small>
+        </li>
+        <li>
+          <a href="https://maps4html.org/Maps4HTML-Workshop-2020/agenda#schedule">
+            W3C/OGC Joint Workshop Series on Maps for the Web
+          </a>
+          <small class="event">
+            <a href="https://maps4html.org/Maps4HTML-Workshop-2020/">
+              W3C/OGC virtual workshop, hosted by <abbr title="Natural Resources Canada">NRCAN</abbr>.
+              <time datetime="2020-09-02">September 2</time>–<time datetime="2020-10-21">October 21</time>, 2020.
+            </a>
+          </small>
+        </li>
+        <li>
+          <a href="https://webwewant.fyi/wants/61/">
+            <q>Native maps in the browser (and HTML)</q> submission
+          </a>
+          and
+          <a href="https://www.youtube.com/watch?v=-6-aJAqWWVg">
+            presentation
+          </a>
+          <small class="event">
+            <a href="https://webwewant.fyi/events/2019-smashing-conf-nyc/">
+               WebWeWant event, Smashing Conference. New York, NY USA.
+              <time datetime="2019-10-15">October 15</time>–<time datetime="2019-10-16">16</time>, 2019.
+            </a>
+          </small>
+        </li>
+        <li>
+          <a href="https://www.w3.org/community/maps4html/wiki/TPAC_2019_Agenda">
+            <q>Integrate Web map support into browsers</q> agenda
+          </a>
+          and
+          <a href="https://www.w3.org/2019/09/19-m4h-minutes.html">
+            meeting minutes
+          </a>
+          <small class="event">
+            <a href="https://www.w3.org/2019/09/TPAC/">
+              W3C <abbr title="All Working Group meetings, Technical Plenary, and Advisory Committee Meeting week">TPAC</abbr>.
+              Fukuoka, Japan.
+              <time datetime="2019-09-16">September 16</time>–<time datetime="2019-09-20">20</time>, 2019.
+            </a>
+          </small>
+        </li>
+        <li>
+          <a href="https://www.w3.org/community/maps4html/files/2016/04/LocWeb2016PeterRushforthMapsForHTML.pdf">
+            <q>Extending the Web with Maps</q> presentation
+          </a>
+          <small class="event">
+            <a href="https://dhere.de/locweb2016/programme/">
+              Location and the Web workshop. Montreal, Canada.
+              <time datetime="2016-04-11">April 11</time>–<time datetime="2016-04-15">15</time>, 2016.
+            </a>
+          </small>
+        </li>
+      </ol>
+    </section>
+    <section id="other-links">
+      <h2><a href="#other-links" class="anchor">🔗</a> Other links</h2>
       <p>
         The following related projects
         aren't controlled or published by the community group, but
@@ -423,17 +559,19 @@ a:visited {
           <p>
             See the related proposals for standardizing key new SVG features:
             <a href="https://www.w3.org/Submission/SVGTL/">SVG Tiling and Layering Module (proposal)</a>
-            and <a href="https://www.w3.org/Graphics/SVG/WG/wiki/Proposals/globalView">SVG globalView proposal</a>
+            and <a href="https://www.w3.org/Graphics/SVG/WG/wiki/Proposals/globalView">SVG globalView proposal</a>.
           </p>
         </li>
       </ul>
     </section>
     <footer>
+      <small>
       The source code for this web page
       is <a href="https://github.com/Maps4HTML/Maps4HTML.github.io">hosted on GitHub</a>.
       Please file an issue or make a pull request
       if you find a typo or broken link,
       or if you think we should add other information.
+      </small>
     </footer>
   </body>
 </html>
