@@ -67,6 +67,13 @@ ul, ol {
   padding-left: 1.5em;
 }
 
+ul ul,
+ul ol,
+ol ul,
+ol ol {
+  margin-top: 1em;
+}
+
 li {
   margin-bottom: 1em;
 }
@@ -100,6 +107,35 @@ a:visited {
   vertical-align: text-bottom;
   text-decoration: none;
   margin-inline-start: -2em;
+}
+
+dfn[data-report]::after {
+  pointer-events: none;
+  display: inline-block;
+  color: #000;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 1;
+  padding: 0.3em 0.4em;
+  border-radius: 0.5em;
+  margin: .5em .25em .25em;
+  font-size: .75rem;
+}
+
+dfn[data-report="final"]::after {
+  content: "Final Report";
+  background: #8fa;
+}
+
+dfn[data-report="draft"]::after {
+  content: "Draft Report";
+  background: #ff8;
+}
+
+dfn[data-report="explainer"]::after {
+  content: "Explainer";
+  background: #000;
+  color: #fff;
 }
 
 .logo {
@@ -159,10 +195,6 @@ summary {
     height: auto;
     max-width: 100%;
   }
-  
-  li {
-    margin: 1.5em 0;
-  }
 }
 
 @media (min-width: 1200px) {
@@ -211,6 +243,11 @@ summary {
 
   a:visited {
       color: #a5d;
+  }
+  
+  dfn[data-report="explainer"]::after {
+    background: #fff;
+    color: #000;
   }
 }
     </style>
@@ -294,28 +331,37 @@ summary {
     <section id="specifications-and-reports">
       <h2><a href="#specifications-and-reports" class="anchor">🔗</a> Specifications and Reports</h2>
       <p>
-        The group is currently working on four reports
-        (which are all drafts and subject to change):
+        The group's reports and explainers:
       </p>
       <ul>
-        <li><p><a href="https://www.w3.org/2020/maps/">The W3C and OGC held a Web mapping workshop</a>, and we published 
-          a <a href="https://www.w3.org/2020/maps/report">report</a> of the results.</p></li>
-        <li><a href="https://maps4html.org/HTML-Map-Element-UseCases-Requirements/">Use Cases and Requirements for Standardizing Web Maps</a>
+        <li>
+          <a href="https://www.w3.org/2020/maps/report">Report on the Joint W3C-OGC Workshop on Maps for the Web</a>
+          <dfn data-report="final"></dfn>
+          <p>
+            The report on the Web mapping workshop that was held by the W3C and OGC.
+          </p>
+        </li>
+        <li>
+          <a href="https://maps4html.org/HTML-Map-Element-UseCases-Requirements/">Use Cases and Requirements for Standardizing Web Maps</a>
           (<a href="https://github.com/Maps4HTML/HTML-Map-Element-UseCases-Requirements">GitHub repository</a>)
+          <dfn data-report="draft"></dfn>
           <p>
             An overview of why HTML needs a built-in map viewer element,
             which can combine multiple layers into an interactive view.
           </p>
         </li>
-        <li>
-            An explainer of the 
-            <a href="https://github.com/Maps4HTML/MapML-Proposal">MapML proposal</a>.  
-            The explainer is based on a <a href="https://w3ctag.github.io/explainers">template</a> 
-            recommended by the W3C TAG, and may be the best place to start in 
-            trying to understand the substance of the MapML proposal.
+        <li> 
+          <a href="https://github.com/Maps4HTML/MapML-Proposal">MapML proposal</a>
+          <dfn data-report="explainer"></dfn>
+          <p>
+            An explainer of the MapML proposal.
+            This may be the best place to start in trying to understand the substance of the MapML proposal.
+          </p>
         </li>
-        <li><a href="https://maps4html.org/MapML/spec/">MapML specification</a>
+        <li>
+          <a href="https://maps4html.org/MapML/spec/">MapML specification</a>
           (<a href="https://github.com/Maps4HTML/MapML">GitHub repository</a>)
+          <dfn data-report="draft"></dfn>
           <p>
             Map Markup Language (MapML) is a proposal for a new document format for describing maps,
             which could contain a mix of tiled images,
@@ -327,28 +373,42 @@ summary {
             MapML documents could be used as layers in an HTML map viewer.
           </p>
         </li>
-        <li><a href="https://maps4html.org/UCR-MapML-Matrix/mapml-ucrs-fulfillment-matrix.html">MapML UCR Fulfillment Matrix</a>
+        <li>
+          <a href="https://maps4html.org/UCR-MapML-Matrix/mapml-ucrs-fulfillment-matrix.html">MapML UCR Fulfillment Matrix</a>
           (<a href="https://github.com/Maps4HTML/UCR-MapML-Matrix">GitHub repository</a>)
+          <dfn data-report="draft"></dfn>
           <p>
             Hosted examples and documents how MapML and existing popular web mapping libraries fulfill the
             Use Cases and Requirements for Standardizing Web Maps.
           </p>
         </li>
         <li>MapML Engineering Reports from the <abbr title="Open Geospatial Consortium">OGC</abbr> Innovation Program
-            <ul>
-                <li>
-                  <a  href="https://docs.opengeospatial.org/per/17-019.html">Testbed 13</a> - early community ideas
-                </li>
-                <li>
-                  <a  href="https://docs.opengeospatial.org/per/18-023r1.html">Testbed 14</a> - improved vocabulary
-                </li>
-                <li>
-                  <a  href="https://docs.opengeospatial.org/per/19-046r1.html">Testbed 15</a> - improved vector model
-                </li>
-            </ul>
+          <ul>
+            <li>
+              <a href="https://docs.opengeospatial.org/per/17-019.html">Testbed 13</a>
+              <dfn data-report="draft"></dfn>
+              - early community ideas
+            </li>
+            <li>
+              <a href="https://docs.opengeospatial.org/per/18-023r1.html">Testbed 14</a>
+              <dfn data-report="draft"></dfn>
+              - improved vocabulary
+            </li>
+            <li>
+              <a href="https://docs.opengeospatial.org/per/19-046r1.html">Testbed 15</a>
+              <dfn data-report="draft"></dfn>
+              - improved vector model
+            </li>
+          </ul>
         </li>
-        <li>A <a href="https://www.w3.org/community/maps4html/2019/12/09/the-design-of-mapml/">blog post</a>, detailing how the MapML proposal relates to the 
-            <a href="https://www.w3.org/TR/html-design-principles/">HTML Design Principles</a>.</li>
+        <li>
+          <a href="https://www.w3.org/community/maps4html/2019/12/09/the-design-of-mapml/">The Design of MapML</a>
+          <dfn data-report="explainer"></dfn>
+          <p>
+            A blog post detailing how the MapML proposal relates to the
+            <a href="https://www.w3.org/TR/html-design-principles/">HTML Design Principles</a>.
+          </p>
+        </li>
       </ul>
     </section>
     <section id="software-projects">
