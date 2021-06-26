@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Maps for HTML – Standardizing map viewers on the web</title>
     <meta name="description" content="The W3C Maps for HTML community group is working to standardize methods of defining interactive geographic maps for websites.">
-    <meta property="og:title" content="Maps for HTML Community Group">
+    <meta property="og:title" content="Maps for HTML – Standardizing map viewers on the web">
     <meta property="og:description" content="The W3C Maps for HTML community group is working to standardize methods of defining interactive geographic maps for websites.">
     <meta property="og:url" content="https://maps4html.org">
     <meta property="og:site_name" content="Maps4HTML">
@@ -20,10 +20,6 @@
     <style>
 *, ::before, ::after {
   box-sizing: border-box;
-}
-
-html {
-  overflow-x: hidden;
 }
 
 body {
@@ -57,6 +53,11 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0 -1em;
   padding: 0.2em 1em;
   background: hsla(0,0%,100%,0.5)
+}
+
+h1 {
+  margin: auto;
+  margin-inline-start: -1em;
 }
 
 section[id] h2 {
@@ -195,6 +196,11 @@ summary {
     height: auto;
     max-width: 100%;
   }
+  
+  .icons {
+    margin-inline-start: -1em;
+    margin-inline-end: -1em;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -205,6 +211,10 @@ summary {
   header, footer, section {
     padding: 1em;
     max-width: 45em;
+  }
+  
+  nav details {
+    padding: 0 1em;
   }
   
   .logo {
@@ -249,12 +259,104 @@ summary {
     background: #fff;
     color: #000;
   }
+  
+  a[href="https://github.com/Maps4HTML"] svg {
+    color: #fff;
+  }
+}
+
+.icons {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 0;
+}
+.icons li {
+  list-style: none;
+  margin: 0 .4rem;
+}
+.icons li:first-of-type {
+  margin-inline-start: 0;
+}
+.icons li:last-of-type {
+  margin-inline-start: 0.1rem;
+}
+.icons a,
+.icons button {
+  all: revert;
+  min-height: 44px;
+  min-width: 44px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.icons svg {
+  fill: currentColor;
+  margin: 0 auto;
+}
+button[type="share"] {
+ background-color: transparent;
+ border: none;
+ border-radius: 0;
+ color: inherit;
+ cursor: pointer;
+ font: inherit;
+ line-height: inherit;
+ margin: 0;
+ padding: 0;
+ overflow: visible;
+ text-transform: none;
+ -webkit-appearance: none;
+    -moz-appearance: none;
+         appearance: none;
+}
+@media (min-width: 768px) {
+  header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: unset;
+  }
 }
     </style>
   </head>
   <body>
     <header>
       <h1>Maps for HTML Community Group</h1>
+      
+      <ul class="icons">
+        <li>
+          <a href="https://github.com/Maps4HTML" title="Maps4HTML organization on Github">
+            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 1024 1024" color="#000"><defs></defs><path fill-rule="evenodd" d="M512 0A511.9 511.9 0 000 512c0 226.6 146.6 418 350 485.8 25.7 4.4 35.3-11 35.3-24.4 0-12.1-.7-52.4-.7-95.3-128.6 23.7-161.9-31.4-172.1-60.2-5.8-14.7-30.7-60.1-52.5-72.3-18-9.6-43.5-33.3-.6-34 40.3-.6 69 37.2 78.7 52.6 46 77.4 119.7 55.6 149.1 42.2 4.5-33.3 18-55.7 32.6-68.5-113.9-12.8-233-57-233-252.8 0-55.7 20-101.7 52.6-137.6-5.2-12.8-23-65.3 5-135.7 0 0 43-13.4 140.9 52.5a475 475 0 01128-17.3c43.5 0 87 5.8 128 17.3 97.9-66.5 140.8-52.5 140.8-52.5 28.1 70.4 10.2 123 5.1 135.7a198.1 198.1 0 0152.5 137.6c0 196.5-119.7 240-233.6 252.8 18.5 16 34.5 46.7 34.5 94.7 0 68.5-.6 123.6-.6 140.8 0 13.5 9.6 29.5 35.2 24.4A512.8 512.8 0 001024 512C1024 229.1 794.9 0 512 0z" clip-rule="evenodd"></path></svg>
+          </a>
+        </li>
+        <li>
+          <a href="https://discourse.wicg.io/c/web-mapping/22" title="WICG discourse – Discuss mapping-related Web standards">
+            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 52 52"><path d="m21.05 21.05-0.05025 4.9497 5 9.8995-14.05 14.05 2.0502-21.849z" fill="#e62626"/><path d="m7 0c-3.866 0-7 3.134-7 7v38l14-16v-22c0-3.866-3.134-7-7-7zm0 4a3 3 0 0 1 3 3 3 3 0 0 1-3 3 3 3 0 0 1-3-3 3 3 0 0 1 3-3z" fill="#f89c20"/><path d="m14 28.1-11.949 11.951 0.00391 2e-3c-1.3138 1.3114-2.0529 3.0909-2.0547 4.9472 0 3.866 3.134 7 7 7s7-3.134 7-7zm-7 13.9c1.6569 0 3 1.3431 3 3s-1.3431 3-3 3-3-1.3431-3-3 1.3431-3 3-3z" fill="#d02e27"/><path d="m30.95 21.05 0.05025 4.9497-5 9.8995 14.05 14.05-2.0502-21.849z" fill="#694d9f"/><path d="m45 0c3.866 0 7 3.134 7 7v38l-14-16v-22c0-3.866 3.134-7 7-7zm0 4a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3z" fill="#2eb3c4"/><path d="m38 28.1 11.949 11.951-0.0039 2e-3c1.3138 1.3114 2.0528 3.0909 2.0547 4.9472 0 3.866-3.134 7-7 7s-7-3.134-7-7zm7 13.9c-1.6569 0-3 1.3431-3 3s1.3431 3 3 3 3-1.3431 3-3-1.3431-3-3-3z" fill="#263c81"/><path d="m25.898 19a7 7 0 0 0-4.8477 2.0508 7 7 0 0 0 0 9.8984l4.9492 4.9512 4.9492-4.9512a7 7 0 0 0 0-9.8984 7 7 0 0 0-5.0508-2.0508zm0.10156 4a3 3 0 0 1 3 3 3 3 0 0 1-3 3 3 3 0 0 1-3-3 3 3 0 0 1 3-3z" fill="#7f1333"/></svg>
+          </a>
+        </li>
+        <li>
+          <a href="https://gitter.im/Maps4HTML/" title="Maps4HTML on Gitter">
+            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 256 256" preserveAspectRatio="xMidYMid"><defs><linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="a"><stop stop-color="#FB0766" offset="0%"/><stop stop-color="#C50948" offset="100%"/></linearGradient></defs><path d="M0 0h256v256H0V0z" fill="url(#a)"/><path d="M83.914 62.873h12.525v82.661H83.914V62.873zm76.149 20.039h12.524v62.622h-12.524V82.912zm-50.599 0h12.524v110.466h-12.524V82.912zm25.049 0h12.525v110.466h-12.525V82.912z" fill="#FFF"/></svg>
+          </a>
+        </li>
+        <li>
+          <a href="https://twitter.com/maps4html" title="@maps4html on Twitter">
+            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="29" height="29" viewBox="0 0 24 24" color="#1b95e0"><path opacity="0" d="M0 0h24v24H0z"></path><path d="M23.643 4.937c-.835.37-1.732.62-2.675.733.962-.576 1.7-1.49 2.048-2.578-.9.534-1.897.922-2.958 1.13-.85-.904-2.06-1.47-3.4-1.47-2.572 0-4.658 2.086-4.658 4.66 0 .364.042.718.12 1.06-3.873-.195-7.304-2.05-9.602-4.868-.4.69-.63 1.49-.63 2.342 0 1.616.823 3.043 2.072 3.878-.764-.025-1.482-.234-2.11-.583v.06c0 2.257 1.605 4.14 3.737 4.568-.392.106-.803.162-1.227.162-.3 0-.593-.028-.877-.082.593 1.85 2.313 3.198 4.352 3.234-1.595 1.25-3.604 1.995-5.786 1.995-.376 0-.747-.022-1.112-.065 2.062 1.323 4.51 2.093 7.14 2.093 8.57 0 13.255-7.098 13.255-13.254 0-.2-.005-.402-.014-.602.91-.658 1.7-1.477 2.323-2.41z"></path></svg>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.youtube.com/channel/UCKIv6IGwzxPF2HNhvq-VhKA" title="Maps4HTML on YouTube">
+            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="-35.20005 -41.33325 305.0671 247.9995"><path d="M229.763 25.817c-2.699-10.162-10.65-18.165-20.748-20.881C190.716 0 117.333 0 117.333 0S43.951 0 25.651 4.936C15.553 7.652 7.6 15.655 4.903 25.817 0 44.236 0 82.667 0 82.667s0 38.429 4.903 56.85C7.6 149.68 15.553 157.681 25.65 160.4c18.3 4.934 91.682 4.934 91.682 4.934s73.383 0 91.682-4.934c10.098-2.718 18.049-10.72 20.748-20.882 4.904-18.421 4.904-56.85 4.904-56.85s0-38.431-4.904-56.85" fill="red"/><path d="M93.333 117.559l61.333-34.89-61.333-34.894z" fill="#fff"/></svg>
+          </a>
+        </li>
+        <li>
+          <button type="share" title="Share maps4html.org">
+            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="#000000"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92s2.92-1.31 2.92-2.92c0-1.61-1.31-2.92-2.92-2.92zM18 4c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zM6 13c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zm12 7.02c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1z"/></svg>
+          </button>
+        </li>
+      </ul>
     </header>
     <nav>
       <details>
@@ -322,9 +424,6 @@ summary {
             Most work by the group can be found here
             (including this web page).
           </p>
-        </li>
-        <li><a href="https://www.youtube.com/channel/UCKIv6IGwzxPF2HNhvq-VhKA">Maps for HTML is on YouTube</a>
-          <p>The Maps for HTML Community Group has a <a href="https://www.youtube.com/channel/UCKIv6IGwzxPF2HNhvq-VhKA" >channel</a> on YouTube.</p>
         </li>
       </ul>
     </section>
@@ -633,5 +732,30 @@ summary {
       or if you think we should add other information.
       </small>
     </footer>
+    <script>
+    // <button type="share"> polyfill (https://github.com/WICG/proposals/issues/11)
+    // Licensed under a CC0 1.0 Universal (CC0 1.0) Public Domain Dedication
+    // http://creativecommons.org/publicdomain/zero/1.0/
+    (function (win, doc) {
+    const testButton = doc.createElement('button');
+    testButton.setAttribute('type','share');
+    if (testButton.type != 'share') {
+      win.addEventListener('click', function(ev) {
+        ev = ev || win.event;
+        let target = ev.target;
+        let button = target.closest('button[type="share"]');
+        if (button) {
+          const title = doc.querySelector('title').innerText;
+          const url = win.location.href;
+          if (navigator.share) {
+            navigator.share({ title: title, url: url });
+          } else {
+            win.location.href='mailto:?subject='+title+'&body='+url;
+          }
+        }
+      });
+    }
+    }(this, this.document));
+    </script>
   </body>
 </html>
