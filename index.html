@@ -171,11 +171,18 @@ summary {
 .event a {
   color: inherit!important;
   font-weight: normal;
+  text-decoration: none;
   text-underline-offset: .2rem;
 }
 
 .event a abbr {
   text-underline-offset: .1rem;
+}
+
+.event a:focus,
+.event a:hover {
+  text-decoration: underline;
+  text-decoration-style: solid;
 }
 
 @media (max-width: 1199px) {
@@ -640,8 +647,20 @@ button[type="share"] {
       <p>Conferences, meeting minutes, presentations, workshops, and other notable events:</p>
       <ol reversed>
         <li>
+          <a href="https://www.w3.org/2021/06/24-sdw-minutes.html">
+            <q>Maps for HTML Community Report</q> meeting minutes
+          </a>
+          and <a href="https://w3c.github.io/sdw/resources/SDWIG-Maps4HTML-en-20210624.pptx">presentation</a>
+          <small class="event">
+            <a href="https://www.w3.org/2021/06/24-sdw-irc">
+              <abbr title="Spatial Data on the Web Interest Group">SDWIG</abbr> teleconference.
+              <time datetime="2021-06-24">24 June, 2021.</time>
+            </a>
+          </small>
+        </li>
+        <li>
           <a href="https://www.w3.org/2020/10/TPAC/breakout-schedule.html#maps4html">
-            Summary presentation of the W3C/OGC Joint Workshop Series on Maps for the Web and follow-up discussion
+            Summary presentation of the <q>W3C/OGC Joint Workshop Series on Maps for the Web</q> and follow-up discussion
           </a>
           <small class="event">
             <a href="https://www.w3.org/2020/10/TPAC/">
@@ -671,8 +690,20 @@ button[type="share"] {
           </a>
           <small class="event">
             <a href="https://webwewant.fyi/events/2019-smashing-conf-nyc/">
-               WebWeWant event, Smashing Conference. New York, NY USA.
+               WebWeWant event, Smashing conference. New York, NY USA.
               <time datetime="2019-10-15">October 15</time>–<time datetime="2019-10-16">16</time>, 2019.
+            </a>
+          </small>
+        </li>
+        <li>
+          <a href="https://talks.2019.foss4g.org/bucharest/talk/9D7GAU/">
+            <q>MapML: The (new) <q>map</q> HTML element, now in MapServer, GDAL and OGR</q> agenda
+          </a>
+          and <a href="https://www.youtube.com/watch?v=d0KwRNxv4WU">presentation</a>
+          <small class="event">
+            <a href="https://2019.foss4g.org/">
+              <abbr title="Free and Open Source Software for Geospatial">FOSS4G</abbr>. Bucharest, Romania.
+              <time datetime="2019-08-28">August 28, 2019</time>.
             </a>
           </small>
         </li>
@@ -693,6 +724,30 @@ button[type="share"] {
           </small>
         </li>
         <li>
+          <a href="https://inspire.ec.europa.eu/events/conferences/inspire_2018/submissions/318.html">
+            <q>What can bring MapML to the <abbr title="Infrastructure for Spatial Information in the European Community">INSPIRE community</abbr></q>
+            submission
+          </a>
+          and <a href="https://inspire.ec.europa.eu/sites/default/files/presentations/1615_mapml_inspire_2.pdf">presentation</a>
+          <small class="event">
+            <a href="https://inspire.ec.europa.eu/conference2018/">
+              <abbr>INSPIRE</abbr> conference. Antwerp, Belgium.
+              <time datetime="2018-09-19">September 19, 2018</time>.
+            </a>
+          </small>
+        </li>
+        <li>
+          <a href="https://www.w3.org/2018/02/20-sdw-minutes.html#x14">
+            MapML discussion: meeting minutes
+          </a>
+          <small class="event">
+            <a href="https://www.w3.org/2017/sdwig/meetings/f2f-1.html">
+              <abbr title="Spatial Data on the Web Interest Group">SDWIG</abbr> F2F/IRC. Amersfoort, Netherlands.
+              <time datetime="2018-02-20">February 20, 2018</time>.
+            </a>
+          </small>
+        </li>
+        <li>
           <a href="https://www.w3.org/community/maps4html/files/2016/04/LocWeb2016PeterRushforthMapsForHTML.pdf">
             <q>Extending the Web with Maps</q> presentation
           </a>
@@ -700,6 +755,19 @@ button[type="share"] {
             <a href="https://dhere.de/locweb2016/programme/">
               Location and the Web workshop. Montreal, Canada.
               <time datetime="2016-04-11">April 11</time>–<time datetime="2016-04-15">15</time>, 2016.
+            </a>
+          </small>
+        </li>
+        <li>
+          <a href="https://www.w3.org/2014/03/lgd/papers/lgd14_submission_68">
+            <q>GeoGratis API</q> reference
+          </a> and
+          <a href="https://www.w3.org/community/maps4html/wiki/LGD14BarCampNotes">BarCamp notes</a>
+          – extending the web to enable linked geospatial data (birth of the Maps for HTML Community Group!)
+          <small class="event">
+            <a href="https://www.w3.org/2014/03/lgd/">
+              W3C/OGC Linking Geospatial Data workshop. London, England.
+              <time datetime="2014-03-06">March 6, 2014</time>.
             </a>
           </small>
         </li>
